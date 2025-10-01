@@ -1,0 +1,13 @@
+@import url("scss/style-editor-variables");
+@import url("scss/variables");
+@import url("scss/integrations/bootstrap");
+
+.editor-styles-wrapper {
+    @import url("scss/global/functions");
+    @import url("scss/components/button");
+    @import url("scss/global/mixins");
+    @import url("scss/global/global");
+    @import url("scss/global/typography");
+}
+
+@import url("scss/admin");
