@@ -16,6 +16,7 @@ body {
     position: relative;
     font-weight: 400;
     color: $text-color;
+    background: $very-light-gray;
 
     &.archive {
         padding: 0;

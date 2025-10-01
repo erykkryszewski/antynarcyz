@@ -3,13 +3,15 @@
     text-align: center;
     background-color: $theme-color;
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
 
     &--background {
         background: $very-light-gray;
     }
 
     &--subpage {
-        margin: 0 0 -70px;
+        margin: 0 0 -100px;
     }
 
     &__background {
@@ -39,18 +41,26 @@
     }
 
     &__wrapper {
-        padding: 130px 0;
+        padding: 70px 0;
         position: relative;
         z-index: 2;
     }
 
     &__subtitle {
         margin: 10px 0 0;
+
+        @media (width <= 767px) {
+            max-width: 360px;
+            margin: 10px auto 0;
+        }
+    }
+
+    &__title {
+        @extend .h1;
     }
 
     &__title,
-    &__subtitle,
-    p {
+    &__subtitle {
         color: $white;
     }
 
@@ -58,21 +68,22 @@
         max-width: 600px;
         margin: 20px auto 0;
         color: $white;
+        font-size: 19px;
+    }
 
-        a {
-            color: $white;
-        }
+    a {
+        color: $white;
     }
 
     &__button {
         margin: 35px 0 0;
-        background: $white;
-        color: $theme-color;
-        border: 1px solid $white;
+        background: $theme-color2;
+        color: $white;
+        border: 1px solid $theme-color2;
 
         &:hover {
             background: $white;
-            color: $theme-color;
+            color: $theme-color2;
             border: 1px solid $white;
         }
     }

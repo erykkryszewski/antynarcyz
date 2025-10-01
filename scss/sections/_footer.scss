@@ -8,7 +8,7 @@
     }
 
     &__wrapper {
-        padding: 90px 0 80px;
+        padding: 50px 0 60px;
     }
 
     &__logo {
@@ -25,7 +25,7 @@
     &__email {
         display: block;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 19px;
     }
 
     &__phone {
@@ -35,7 +35,7 @@
     &__address {
         span {
             display: block;
-            font-size: 16px;
+            font-size: 19px;
             color: $black;
             font-weight: 500;
             margin: 15px 0 0;
@@ -43,7 +43,7 @@
 
         p {
             margin: 0;
-            font-size: 16px;
+            font-size: 19px;
         }
     }
 
@@ -75,7 +75,7 @@
 
                 a {
                     color: $black;
-                    font-size: 16px;
+                    font-size: 19px;
                     line-height: 1.5;
                     max-width: 200px;
                 }

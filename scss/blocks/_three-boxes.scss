@@ -10,22 +10,78 @@
         width: 100%;
         position: relative;
         padding: 25px;
-        background: $white;
+        background: $black;
         box-shadow: none;
-        border: 2px solid $light-gray;
-        border-radius: 0;
         margin: 30px 0 0;
+        border-radius: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         height: calc(100% - 30px);
+        overflow: hidden;
+        z-index: 1;
+
+        // Gradient effect na dole (nieregularny)
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -20%;
+            right: -15%;
+            width: 70%;
+            height: 60%;
+            background: radial-gradient(
+                ellipse at center,
+                rgba($theme-color2, 0.4) 0%,
+                rgba($theme-color, 0.3) 30%,
+                transparent 70%
+            );
+            z-index: -1;
+            transition: all 450ms ease;
+            filter: blur(30px);
+            opacity: 0.8;
+        }
+
+        // Dodatkowy gradient po lewej stronie (subtelny)
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10%;
+            left: -20%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(
+                circle at center,
+                rgba($theme-color, 0.25) 0%,
+                rgba($theme-color2, 0.15) 40%,
+                transparent 70%
+            );
+            z-index: -1;
+            transition: all 450ms ease;
+            filter: blur(25px);
+            opacity: 0.6;
+        }
 
         &:hover {
             a.arrow-link {
                 &::after {
                     right: -8px;
                 }
+            }
+
+            // Efekt hover - gradient się rozszerza i intensyfikuje
+            &::before {
+                bottom: -15%;
+                right: -10%;
+                opacity: 1;
+                filter: blur(35px);
+            }
+
+            &::after {
+                bottom: -5%;
+                left: -15%;
+                opacity: 0.8;
+                filter: blur(30px);
             }
         }
 
@@ -39,14 +95,14 @@
         width: 55px;
         height: 55px;
         border-radius: 0;
-        background: $black;
+        background: $white;
         z-index: 1;
         transition: all 350ms ease;
-        padding: 10px;
+        padding: 7px;
 
         img {
             transition: all 350ms ease;
-            filter: brightness(0) invert(1);
+            filter: brightness(0);
             min-width: 30px;
         }
     }
@@ -60,6 +116,7 @@
         h4,
         h5 {
             margin: 25px 0 0;
+            color: $white;
 
             @extend .h3;
         }
@@ -78,8 +135,9 @@
 
     &__button {
         margin: 20px 0 0;
-        background: $black !important;
-        border: 1px solid $black !important;
+        background: $white !important;
+        border: 1px solid $white !important;
+        color: $black !important;
     }
 
     @media (width <= 767px) {

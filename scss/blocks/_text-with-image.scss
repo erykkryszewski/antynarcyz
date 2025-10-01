@@ -2,6 +2,7 @@
     width: 100%;
     text-align: left;
     position: relative;
+    max-width: 100%;
 
     &--background {
         background: $very-light-gray;
@@ -16,6 +17,10 @@
 
         &--reverse {
             flex-direction: row-reverse;
+        }
+
+        @media (width <= 991px) {
+            flex-direction: column-reverse;
         }
     }
 
@@ -45,8 +50,8 @@
             }
         }
 
-        @media (width <= 767px) {
-            margin: 30px 0 0;
+        @media (width <= 991px) {
+            margin: 0 0 30px;
             height: 380px;
         }
     }
@@ -64,5 +69,10 @@
 
     &__button {
         margin: 30px 0 0;
+    }
+
+    @media (width <= 991px) {
+        overflow: hidden;
+        margin: -55px 0 0;
     }
 }
