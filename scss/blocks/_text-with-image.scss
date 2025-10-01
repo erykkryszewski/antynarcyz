@@ -25,7 +25,7 @@
         border-radius: $theme-border-radius;
 
         img {
-            object-position: center left;
+            object-position: center;
             border-radius: $theme-border-radius;
         }
 
@@ -33,7 +33,7 @@
             /* temporary styles */
             img {
                 // object-position: center right;
-                object-position: left bottom;
+                object-position: center;
             }
         }
 

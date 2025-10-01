@@ -17,7 +17,7 @@ $button_full_width = get_field("button_full_width");
     <?php endif; ?>
     <div class="container">
         <div class="row text-with-image__row <?php if ('reverse' == $direction) { echo 'text-with-image__row--reverse'; } ?>">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 col-xl-5">
                 <?php if (!empty($content)): ?>
                 <div class="text-with-image__content"><?php echo apply_filters('the_title', $content); ?></div>
                 <?php endif; ?> <?php if (!empty($button)): ?>
@@ -27,9 +27,9 @@ $button_full_width = get_field("button_full_width");
                 <?php endif; ?>
             </div>
             <?php if (!empty($image)): ?>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 col-xl-7">
                 <div class="text-with-image__picture <?php if ('reverse' == $direction) { echo 'text-with-image__picture--reverse'; } ?> <?php if ('big' == $image_size) { echo 'text-with-image__picture--big'; } ?>">
-                    <?php echo ercoding_get_image('programmer', 'large', [ 'class' => 'object-fit-cover', 'seed' => 'programmer1', ]); ?>
+                    <?php echo wp_get_attachment_image($image, 'large', '', ['class' => $image_class])?>
                 </div>
             </div>
             <?php endif; ?>

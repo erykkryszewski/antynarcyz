@@ -13,7 +13,7 @@
     }
 
     &__logo {
-        width: 250px;
+        width: 200px;
         flex-shrink: 0;
         position: relative;
         transition: all 250ms ease;
@@ -74,7 +74,7 @@
             display: flex;
             gap: 8px;
             color: $white;
-            font-weight: 500;
+            font-weight: 400;
             align-items: center;
 
             &::before {
@@ -117,7 +117,8 @@
 
             > a {
                 font-size: 17px;
-                font-weight: 500;
+                font-weight: 400;
+                text-transform: uppercase;
                 padding: 5px;
                 color: $text-color;
                 transition: all 300ms ease;
@@ -180,7 +181,7 @@
                         color: $text-color;
                         text-transform: initial;
                         font-size: 14px;
-                        font-weight: 500;
+                        font-weight: 400;
                         display: block;
                         padding: 8px 15px;
                         line-height: 1;
@@ -289,7 +290,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 15px;
             border-radius: 50%;
             transition: all 300ms ease;
