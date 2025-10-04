@@ -81,7 +81,7 @@ h4 > span {
 
 p,
 .paragraph {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.5;
     font-weight: 400;
     margin: 20px 0 0;
@@ -89,7 +89,7 @@ p,
 
     > a {
         font-weight: 500;
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.5;
         text-decoration: underline;
         display: inline-block;
@@ -103,13 +103,13 @@ p,
 
     > strong {
         font-weight: 600;
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.5;
         color: $text-color;
     }
 
     > span {
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.5;
         font-weight: 400;
         color: $text-color;
@@ -120,19 +120,19 @@ ul > li,
 ol > li,
 ul.wp-block-list li,
 ol.wp-block-list li {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.5;
     font-weight: 400;
 
     > strong {
         font-weight: 600;
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.5;
         color: $text-color;
     }
 
     > span {
-        font-size: 19px;
+        font-size: 20px;
         line-height: 1.5;
         font-weight: 400;
         color: $text-color;

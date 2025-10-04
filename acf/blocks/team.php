@@ -14,7 +14,7 @@ $team = get_field("team");
         <div class="team__wrapper">
             <div class="row">
                 <?php foreach ($team as $key => $item): ?>
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4">
                     <div class="team__item">
                         <?php if (!empty($item['image'])): ?>
                         <div class="team__image <?php if ($item['image_class'] == 'object-fit-contain') { echo 'team__image--padding';} ?>">

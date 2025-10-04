@@ -2,9 +2,11 @@
     background: $very-light-gray;
     width: 100%;
     margin: 70px 0 0;
+    border-top: 1px solid $border-color;
 
     &--homepage {
         margin: 0;
+        border: none;
     }
 
     &__wrapper {

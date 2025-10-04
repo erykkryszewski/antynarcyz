@@ -22,7 +22,6 @@
         overflow: hidden;
         z-index: 1;
 
-        // Gradient effect na dole (nieregularny)
         &::before {
             content: "";
             position: absolute;
@@ -42,7 +41,6 @@
             opacity: 0.8;
         }
 
-        // Dodatkowy gradient po lewej stronie (subtelny)
         &::after {
             content: "";
             position: absolute;
