@@ -44,21 +44,17 @@
     }
 
     &__question {
-        font-size: 18px;
-        font-family: $font-primary;
-        color: $dark;
         width: 100%;
         display: block;
         text-align: left;
 
-        @media (width <= 767px) {
-            font-size: 14px;
-        }
+        @extend .h4;
     }
 
     &__answer {
         p {
             text-align: left;
+            font-size: 16px;
 
             @media (width <= 767px) {
                 font-size: 14px;
