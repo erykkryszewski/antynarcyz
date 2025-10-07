@@ -22,7 +22,7 @@ $global_logo = get_field("global_logo", "options"); ?>
         <div class="subpage-hero__background subpage-hero__background--plain"></div>
         <div class="container">
             <div class="subpage-hero__wrapper">
-                <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Blog'); ?></h1>
+                <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Wsparcie'); ?></h1>
             </div>
         </div>
     </div>
