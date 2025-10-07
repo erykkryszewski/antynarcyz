@@ -26,15 +26,6 @@ $global_logo = get_field("global_logo", "options"); ?>
             </div>
         </div>
     </div>
-    <div class="spacer" style="height: 90px"></div>
-    <div class="section-title">
-        <div class="container">
-            <div class="section-title__wrapper section-title__wrapper--decorated">
-                <h2>Lorem ipsum</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus nemo vero inventore ipsam est distinctio ullam perspiciatis veniam facilis?</p>
-            </div>
-        </div>
-    </div>
     <!-- max 12 items -->
     <?php if (have_posts()): ?>
     <div class="theme-blog theme-blog--subpage">
@@ -51,9 +42,9 @@ $global_logo = get_field("global_logo", "options"); ?>
                             <div class="theme-blog__content">
                                 <div>
                                     <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
-                                    <p><?php $excerpt = get_the_excerpt(); if (empty($excerpt)) { echo substr(get_content_excerpt(), 0, 150) . '...'; } else { echo substr($excerpt, 0, 150) . '...'; } ?></p>
+                                    <p><?php $excerpt = get_the_excerpt(); if (empty($excerpt)) { echo mb_substr(strip_tags(get_the_content()), 0, 150, 'UTF-8') . '...'; } else { echo mb_substr($excerpt, 0, 150, 'UTF-8') . '...'; } ?></p>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="theme-blog__button button button--small"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -68,11 +59,11 @@ $global_logo = get_field("global_logo", "options"); ?>
     </div>
     <?php endif; ?>
     <div class="spacer spacer--small" style="height: 40px"></div>
-    <div class="cta">
+    <div class="cta cta--subpage">
         <div class="container">
             <div class="cta__wrapper">
-                <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
-                <p></p>
+                <h2 class="cta__title">Umów się na darmową rozmowę</h2>
+                <h3 class="cta__subtitle">Pierwszy krok do wolności zaczyna się u nas</h3>
                 <div>
                     <a href="/kontakt/" class="cta__button button">Skontaktuj się</a>
                 </div>

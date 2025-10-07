@@ -88,7 +88,7 @@ $author_position = get_field("author_position", $page_id);
                         </div>
                         <div class="prev-and-next-posts__content">
                           <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-and-next-posts__title"><?php echo $prev_post->post_title; ?></a>
-                          <a href="<?php echo get_permalink($prev_post->ID); ?>" class="button button--single mt-4">Poprzedni wpis</a>
+                          <a href="<?php echo get_permalink($prev_post->ID); ?>" class="button button--small button--single mt-4">Poprzedni wpis</a>
                         </div>
                       </div>
                     <?php endif; ?>
@@ -102,7 +102,7 @@ $author_position = get_field("author_position", $page_id);
                         </div>
                         <div class="prev-and-next-posts__content">
                           <a href="<?php echo get_permalink($next_post->ID); ?>" class="prev-and-next-posts__title"><?php echo $next_post->post_title; ?></a>
-                          <a href="<?php echo get_permalink($next_post->ID); ?>" class="button button--single mt-4">Następny wpis</a>
+                          <a href="<?php echo get_permalink($next_post->ID); ?>" class="button button--small button--single mt-4">Następny wpis</a>
                         </div>
                       </div>
                     <?php endif; ?>

@@ -13,8 +13,7 @@
         padding: 10px 0;
 
         @media (width <= 767px) {
-            justify-content: center;
-            flex-direction: column;
+            flex-wrap: wrap;
         }
     }
 
