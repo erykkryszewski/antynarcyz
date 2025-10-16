@@ -3,6 +3,18 @@ $url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
 $section_id = get_field("section_id");
 $background = get_field("background");
 $team = get_field("team");
+
+// Określ klasy kolumn na podstawie liczby elementów
+$team_count = !empty($team) ? count($team) : 0;
+$col_class = "col-6 col-md-4"; // domyślnie
+
+if ($team_count == 4) {
+    $col_class = "col-6 col-md-4 col-xl-3";
+} elseif ($team_count == 3) {
+    $col_class = "col-6 col-md-4";
+} elseif ($team_count == 2) {
+    $col_class = "col-6 col-md-6";
+}
 ?>
 
 <?php if (!empty($team)): ?>
@@ -14,7 +26,7 @@ $team = get_field("team");
         <div class="team__wrapper">
             <div class="row">
                 <?php foreach ($team as $key => $item): ?>
-                <div class="col-6 col-md-4">
+                <div class="<?php echo $col_class; ?>">
                     <div class="team__item">
                         <?php if (!empty($item['image'])): ?>
                         <div class="team__image <?php if ($item['image_class'] == 'object-fit-contain') { echo 'team__image--padding';} ?>">
